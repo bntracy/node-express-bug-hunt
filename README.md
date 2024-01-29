@@ -32,9 +32,9 @@ Added line 28 to `quote.router.js`: `module.exports = router;`
 
 ### Bug 2
 
-Browser returns `Cannot GET /` when navigating to `localhost:5007`.
+Browser returns `Cannot GET /` when navigating to `localhost:5007`
 
-Fixed `server.js` line 17: switched `'public'` to `'server/public'`.
+Fixed `server.js` line 17: switched `'public'` to `'server/public'`
 
 ### Bug 3
 
@@ -66,9 +66,15 @@ Fixed `quote.router.js` line 21: changed `quotesList` to `quoteList`
 
 Fixed `client.js` line 52: changed `getQuote()` to `getQuotes()`
 
-### Bug 8
+### Bugs 8 & 9
 
 Lines 16 and 24 of `client.js` do nothing, because a for-of loop is used to loop over the array. I have commented them out.
+
+### Bug 10
+
+In `server.js` says right on line 6 to use port 5001, so I changed line 7 from `5007` to `5001`
+
+And with that, the app appears to work! 
 
 ## Extra Practice (Optional)
 
