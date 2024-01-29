@@ -34,25 +34,41 @@ Added line 28 to `quote.router.js`: `module.exports = router;`
 
 Browser returns `Cannot GET /` when navigating to `localhost:5007`.
 
-Fixed `server.js` line 17: switch `'public'` to `'server/public'`.
+Fixed `server.js` line 17: switched `'public'` to `'server/public'`.
 
 ### Bug 3
 
 `GET http://localhost:5007/quotes%7D 404 (Not Found)`
 
-Fixed `client.js` line 7: change `url: '/quotes}'` to `url: '/quotes'`, removing the bracket
+Fixed `client.js` line 7: changed `url: '/quotes}'` to `url: '/quotes'`, removing the bracket
 
 ### Bug 4
 
 `GET http://localhost:5007/quotes 404 (Not Found)`
 
-Fixed `quote.router.js` line 8: change `'/quotes'` to `'/'`
+Fixed `quote.router.js` line 8: changed `'/quotes'` to `'/'`
 
 ### Bug 5
 
 `TypeError: quotesFromServer is not iterable`
 
-Fixed `quote.router.js` line 5: change `{}` to `[]` so we're sending an array, not an object
+Fixed `quote.router.js` line 5: changed `{}` to `[]` so we're sending an array, not an object
+
+### Bug 6
+
+`ReferenceError: quotesList is not defined`
+
+Fixed `quote.router.js` line 21: changed `quotesList` to `quoteList`
+
+### Bug 7
+
+`ReferenceError: getQuote is not defined`
+
+Fixed `client.js` line 52: changed `getQuote()` to `getQuotes()`
+
+### Bug 8
+
+Lines 16 and 24 of `client.js` do nothing, because a for-of loop is used to loop over the array. I have commented them out.
 
 ## Extra Practice (Optional)
 

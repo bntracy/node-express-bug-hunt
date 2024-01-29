@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
     // as a property of req.body.
     console.log(req.body);
     let quoteToAdd = req.body;
-    quotesList.push(quoteToAdd);
+    quoteList.push(quoteToAdd);
     res.sendStatus(201);
 });
 
