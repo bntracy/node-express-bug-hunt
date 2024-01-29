@@ -14,7 +14,7 @@ app.use(express.json());
 app.use('/quotes', quoteRouter);
 
 // ??? Look here for files
-app.use(express.static('public'));
+app.use(express.static('server/public'));
 
 app.listen(port, () => {
     console.log(`listening on port: ${port}`);

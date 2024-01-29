@@ -26,7 +26,33 @@ Fixed `quote.router.js` line 28: switch `app` to `router`. _This is the solution
 
 ### Bug 1
 
-...
+`TypeError: Router.use() requires a middleware function but got a Object`
+
+Added line 28 to `quote.router.js`: `module.exports = router;`
+
+### Bug 2
+
+Browser returns `Cannot GET /` when navigating to `localhost:5007`.
+
+Fixed `server.js` line 17: switch `'public'` to `'server/public'`.
+
+### Bug 3
+
+`GET http://localhost:5007/quotes%7D 404 (Not Found)`
+
+Fixed `client.js` line 7: change `url: '/quotes}'` to `url: '/quotes'`, removing the bracket
+
+### Bug 4
+
+`GET http://localhost:5007/quotes 404 (Not Found)`
+
+Fixed `quote.router.js` line 8: change `'/quotes'` to `'/'`
+
+### Bug 5
+
+`TypeError: quotesFromServer is not iterable`
+
+Fixed `quote.router.js` line 5: change `{}` to `[]` so we're sending an array, not an object
 
 ## Extra Practice (Optional)
 

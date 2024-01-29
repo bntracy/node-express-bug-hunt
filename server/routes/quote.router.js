@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 // ??? List of quotes
-let quoteList = {};
+let quoteList = [];
 
 // ??? GET request returns information
-router.get('/quotes', (req, res) => {
+router.get('/', (req, res) => {
     console.log('GET Request made for /quotes');
     // Send back the list of quotes!
     res.send(quoteList);
@@ -25,3 +25,4 @@ router.post('/', (req, res) => {
 // PUT request update information
 
 // ???
+module.exports = router;
